@@ -1,0 +1,15 @@
+pipeline {
+   agent any
+   	stages{
+   	   stage('compile the code'){
+   	   steps{
+   	       sh 'javac AddTwoIntegers.java'
+   	   }
+        }
+          stage('running the code'){
+            steps{
+              sh 'java AddTwoIntegers'
+            }   
+          }     
+   }
+}
